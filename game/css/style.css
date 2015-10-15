@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+body	{
+  background-color: #000;
+  }
+h1{
+  font-size: 5em;
+  font-family: arial,helvetica;
+  color: #fff;
+  margin:0;
+  padding:0;
+}
+
+/* Centered texts in each section
+* --------------------------------------- */
+.section{
+  text-align:center;
+}
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+.section{
+  background-size: cover;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.slide{
+  background-size: cover;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+/* Animate section
+* --------------------------------------- */
+/* 页面离开时被加载的效果*/
+.sectionAway	{
+	opacity: 0.8;
+	-webkit-transition: all 0.3s ;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+
+	-webkit-transform: scale(0.6);
+	-moz-transform: scale(0.6);
+	-ms-transform: scale(0.6);
+	-o-transform: scale(0.6);
+	transform: scale(0.6);
+}
+
+/* 页面被Active前被加载的效果 end */
+.sectionEnter	{
+	border: 0px;
+	padding: 0;
+	WIDTH: 100%!important;
+	height: auto!important;
+	top: 0px;
+}
+/* Bottom menu
+* --------------------------------------- */
+#infoMenu li a {
+  color: #fff;
+}
+
+/**
+ * = unit 统一元件样式
+ *******************************************************************************************************/
+/**
+ * 箭头指示元件
+ * -u-arrow
+ */
+.u-arrow { position: fixed; bottom: 30px; left:50%; z-index: 150; width: 80px; height: 80px; margin-left: -39px; /*background: rgba(160,160,160,0.6); border-radius: 50%;*/ }
+.u-arrow p { position: absolute; top: 50%; left: 50%; margin: -14px 0 0 -25px; width: 50px; height: 28px; background-position: 0 -82px;
+	-webkit-animation: start 1.5s infinite ease-in-out;
+	   -moz-animation: start 1.5s infinite ease-in-out;
+	        animation: start 1.5s infinite ease-in-out;
+}
+
+/*sprite图片合并*/
+.css_sprite01 {
+	background-image:url('../imgs/css_sprite01.png');
+	background-repeat:no-repeat;
+} 
+
+/*******************************************************************************************************/
+/**
+ * 箭头指示元件
+ * -p-arrow n-arrow
+ */
+
+/**
+ * = animate 动画样式
+ *******************************************************************************************************/
+/*向上箭头指示引导*/
+@-webkit-keyframes start {
+	0%,30% {opacity: 0;-webkit-transform: translate(0,10px);}
+	60% {opacity: 1;-webkit-transform: translate(0,0);}
+	100% {opacity: 0;-webkit-transform: translate(0,-8px);}
+}
+@-moz-keyframes start {
+	0%,30% {opacity: 0;-moz-transform: translate(0,10px);}
+	60% {opacity: 1;-moz-transform: translate(0,0);}
+	100% {opacity: 0;-moz-transform: translate(0,-8px);}
+}
+@keyframes start {
+	0%,30% {opacity: 0;transform: translate(0,10px);}
+	60% {opacity: 1;transform: translate(0,0);}
+	100% {opacity: 0;transform: translate(0,-8px);}
+}
+/*向左箭头指示引导*/
+@-webkit-keyframes startL {
+	0%,30% {opacity: 0.4;-webkit-transform: translate(0px,0px);}
+	60% {opacity: 1;-webkit-transform: translate(0,0);}
+	100% {opacity: 0.4;-webkit-transform: translate(0px,0px);}
+}
+@-moz-keyframes startL {
+	0%,30% {opacity: 0.4;-webkit-transform: translate(0px,0px);}
+	60% {opacity: 1;-webkit-transform: translate(0,0);}
+	100% {opacity: 0.4;-webkit-transform: translate(0px,0px);}
+}
+@keyframes startL {
+	0%,30% {opacity: 0.4;-webkit-transform: translate(0px,0px);}
+	60% {opacity: 1;-webkit-transform: translate(0,0);}
+	100% {opacity: 0.4;-webkit-transform: translate(0px,0px);}
+}
+/*向右箭头指示引导*/
+@-webkit-keyframes startR {
+	0%,30% {opacity: 0.4;-webkit-transform: translate(0px,0px);}
+	60% {opacity: 1;-webkit-transform: translate(0,0);}
+	100% {opacity: 0.4;-webkit-transform: translate(0px,0px);}
+}
+@-moz-keyframes startR {
+	0%,30% {opacity: 0.4;-moz-transform: translate(0px,0px);}
+	60% {opacity: 1;-moz-transform: translate(0,0);}
+	100% {opacity: 0.4;-moz-transform: translate(0px,0px);}
+}
+@keyframes startR {
+	0%,30% {opacity: 0.4;transform: translate(-8px,0px);}
+	60% {opacity: 1;transform: translate(0,0);}
+	100% {opacity: 0.4;transform: translate(10px,0px);}
+}
+
+/*封面手引*/
+@keyframes fengJump {
+	0%   {transform:translateY(0);}
+	20%  {transform:translateY(0);}
+	40%  {transform:translateY(-40px);}
+	50%  {transform:translateY(0);}
+	60%  {transform:translateY(-15px);}
+	80%  {transform:translateY(0);}
+	100% {transform:translateY(0);}
+}
+@-webkit-keyframes fengJump {
+	0%   {-webkit-transform:translateY(0);}
+	20%  {-webkit-transform:translateY(0);}
+	40%  {-webkit-transform:translateY(-40px);}
+	50%  {-webkit-transform:translateY(0);}
+	60%  {-webkit-transform:translateY(-15px);}
+	80%  {-webkit-transform:translateY(0);}
+	100% {-webkit-transform:translateY(0);}
+}
+@-moz-keyframes fengJump {
+	0%   {-moz-transform:translateY(0);}
+	20%  {-moz-transform:translateY(0);}
+	40%  {-moz-transform:translateY(-40px);}
+	50%  {-moz-transform:translateY(0);}
+	60%  {-moz-transform:translateY(-15px);}
+	80%  {-moz-transform:translateY(0);}
+	100% {-moz-transform:translateY(0);}
+}
+@-ms-keyframes fengJump {
+	0%   {-ms-transform:translateY(0);}
+	20%  {-ms-transform:translateY(0);}
+	40%  {-ms-transform:translateY(-40px);}
+	50%  {-ms-transform:translateY(0);}
+	60%  {-ms-transform:translateY(-15px);}
+	80%  {-ms-transform:translateY(0);}
+	100% {-ms-transform:translateY(0);}
+}
+@-o-keyframes fengJump {
+	0%   {-o-transform:translateY(0);}
+	20%  {-o-transform:translateY(0);}
+	40%  {-o-transform:translateY(-40px);}
+	50%  {-o-transform:translateY(0);}
+	60%  {-o-transform:translateY(-15px);}
+	80%  {-o-transform:translateY(0);}
+	100% {-o-transform:translateY(0);}
+}
